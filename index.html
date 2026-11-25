@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>EcoSort Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+    <h1>EcoSort Configuration Portal</h1>
+    <p>Welcome to our waste classification system</p>
+</div>
+
+<!-- Login -->
+<div id="login-area">
+    <h2>Admin Login</h2>
+
+    <label for="username">Username</label>
+    <input type="text" id="username" placeholder="Enter username">
+
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Enter password">
+
+    <button onclick="login()">Login</button>
+
+    <p id="login-message"></p>
+</div>
+
+<!-- Portal -->
+<div id="portal-area" style="display:none;">
+
+    <div id="admin-info">
+        <span id="admin-label"></span>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <div class="country-section">
+        <h2 id="section-title">Supported Countries</h2>
+        <p id="section-description">
+            Select a country to view its waste classification rules.
+        </p>
+
+        <div id="country-buttons"></div>
+    </div>
+
+    <p id="message">Please select a country.</p>
+
+    <div id="config-area"></div>
+    <div id="summary-area"></div>
+
+    <div id="export-container">
+        <button id="export-button" onclick="exportConfiguration()">
+            Export Configuration
+        </button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
